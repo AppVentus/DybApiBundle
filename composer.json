@@ -21,8 +21,8 @@
         "symfony/class-loader": "2.1.*"
     },
     "autoload": {
-        "psr-0": { "DYB\\APIBundle": "" }
+        "psr-0": { "DYB\\ApiBundle": "" }
     },
-    "target-dir": "DYB/APIBundle",
+    "target-dir": "DYB/ApiBundle",
     "minimum-stability": "dev"
 }

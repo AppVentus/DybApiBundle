@@ -1,6 +1,6 @@
 <?php
 
-namespace DYB\APIBundle;
+namespace DYB\ApiBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
