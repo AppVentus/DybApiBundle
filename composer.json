@@ -1,5 +1,5 @@
 {
-    "name": "appventus/cms-bundle",
+    "name": "dyb/api-bundle",
     "type": "symfony-bundle",
     "description": "Symfony DoYouBuzz Api Connection Bundle",
     "keywords": ["symfony","doyoubuzz", "showcase", "api", "library"],
