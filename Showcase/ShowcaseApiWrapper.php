@@ -1,9 +1,11 @@
 <?php
+namespace DYB\APIBundle\Showcase\Wrapper;
 
 /**
  * ShowcaseApiWrapper
  *
  * @author Name t.belin@doyoubuzz.com
+ * @author Name leny@appventus.com
  */
 class ShowcaseApiWrapper {
 
