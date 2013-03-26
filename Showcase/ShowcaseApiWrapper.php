@@ -1,5 +1,5 @@
 <?php
-namespace DYB\APIBundle\Showcase;
+namespace DYB\ApiBundle\Showcase;
 
 /**
  * ShowcaseApiWrapper
