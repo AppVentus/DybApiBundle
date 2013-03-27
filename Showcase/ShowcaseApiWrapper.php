@@ -1,5 +1,5 @@
 <?php
-namespace DYB\ApiBundle\Showcase;
+namespace Dyb\ApiBundle\Showcase;
 
 /**
  * ShowcaseApiWrapper
@@ -63,7 +63,7 @@ class ShowcaseApiWrapper {
         if($code == 200 || $code == 204) {
             $result = json_decode($content);
         } else {
-            throw new Exception('Error while getting data from API on URL ' . $url . ' with return code (' . $code . ') : Request: ' . $body . ' - Response: '. $content);
+            throw new \Exception('Error while getting data from API on URL ' . $url . ' with return code (' . $code . ') : Request: ' . $body . ' - Response: '. $content);
         }
 
         curl_close($ch);
@@ -85,6 +85,10 @@ class ShowcaseApiWrapper {
      */
     protected function generateUrl($action, $parameters)
     {
+        //action needs proxy ?
+        if(in_array($action,array('search','user','cv','employmentpreferences','metadatas'))){
+            $action = "dyb/".$action;
+        }
         return self::API_URL . '/' . self::API_VERSION . '/' . $action . '?' . http_build_query($parameters);
     }
 

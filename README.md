@@ -1,28 +1,54 @@
-# DoYouBuzz API connection examples
+# DoYouBuzz API connection bundle
 
-Here are two PHP examples to get informations from DoYouBuzz using either an oAuth connection or a Partner connection (for more information see the [Documentation](http://doc.doyoubuzz.com)).
+To do some custom needs , do not forget to fork and to rtfm [Documentation](http://doc.doyoubuzz.com).
 
 ## Requirements
 
 You must :
 
-* have a DoYouBuzz API Key and API Secret 
+* have a symfony2 projet : >= v2.1
+* have a DoYouBuzz API Key and API Secret
 * have a local webserver with cURL installed
 * know if you have a Partner or Application access
-* know the link to the official [DoYouBuzz API Documentation](http://doc.doyoubuzz.com)
+
+# Installation
+
+##With composer
+
+[dyb/api-dundle](https://packagist.org/packages/dyb/api-bundle)
+
+"require": {
+        "dyb/api-bundle": "dev-master"
+    },
+
+#Configuration
+
+Add the line below to your config. For example in your app/config/config.yml :
+
+    dyb_api:
+        showcase:
+            key:       xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            secret:    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+#Features
+
+##Showcase :
+
+###Get the list of your users, paginated :
+
+    [
+        {"username":"john@doe.me","email":"john@doe.me","firstname":"john","lastname":"doe","id":311243},
+        {"username":"jane@doe.me","email":"jane@doe.me","firstname":"jane","lastname":"doe","id":311245}
+    ]
+
+**Go to this url : /dyb/showcase/list**
+
+###Get a choice list of your users
+
+    {
+        "1":"John Doe",
+        "2":"Jane Doe"
+    }
 
 
-## Application
-
-* Set your ApiKey, ApiSecret and site url in the config.php file
-* Launch app.php in your webserver (cURL extension must be installed). 
-* You will then be redirected on DoYouBuzz.com on the authorization screen. 
-* If you authorize the application to access your information, you will be redirected on your website with an extract of your DoYouBuzz datas
-
-## Partner (deprecated)
-
-Please note this API is deprecated and will be removed soon. If you rely on this API please contact us.
-
-* Set your ApiKey and ApiSecret in the partner.php file
-* Change the userId parameter in the $url string (this user must has joined you private CV database so you can get his informations)
-* Launch partner.php in your webserver (cURL extension must be installed)
+**Go to this url : /dyb/showcase/choice**
