@@ -1,12 +1,12 @@
 <?php
 
-namespace DYB\ApiBundle;
+namespace Dyb\ApiBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
- * DYBApiBundle
+ * DybApiBundle
  */
-class DYBApiBundle extends Bundle
+class DybApiBundle extends Bundle
 {
 }
