@@ -23,6 +23,20 @@ You must :
 
 #Configuration
 
+
+Register Bundle :
+
+Add this line to your AppKernel.php :
+
+    new Dyb\ApiBundle\DybApiBundle(),
+
+Declare the route in your routing.yml :
+
+    dyb_showcase:
+        resource: "@DybApiBundle/Controller/Showcase/"
+        type:     annotation
+        prefix:   /dyb/showcase/
+
 Add the line below to your config. For example in your app/config/config.yml :
 
     dyb_api:
