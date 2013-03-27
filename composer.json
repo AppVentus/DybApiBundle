@@ -3,7 +3,7 @@
     "type": "symfony-bundle",
     "description": "Symfony DoYouBuzz Api Connection Bundle",
     "keywords": ["symfony","doyoubuzz", "showcase", "api", "library"],
-    "homepage": "https://github.com/AppVentus/dyb-api-connexion-php",
+    "homepage": "https://github.com/AppVentus/DybApiBundle",
     "license": "MIT",
     "authors": [
         {
