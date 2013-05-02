@@ -34,14 +34,13 @@ class DybShowcaseUser
      * @param string  $lastname     The user lastname
      * @param string  $email          The user email
      */
-    public function __construct($id, $firstname, $lastname, $email)
+    public function __construct($id = null, $firstname = null, $lastname = null, $email = null)
     {
 
         $this->id = $id;
         $this->firstname = $firstname;
         $this->lastname = $lastname;
         $this->email = $email;
-        $this->description = 'okk)-';
     }
     /**
      * ToString function
@@ -51,26 +50,6 @@ class DybShowcaseUser
     public function __toString()
     {
         return (string) $this->id;
-    }
-
-    /**
-     * ToString function
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return 'ok';
-    }
-
-    /**
-     * ToString function
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return 'name';
     }
 
     /**
