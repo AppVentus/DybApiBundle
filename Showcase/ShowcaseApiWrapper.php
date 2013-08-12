@@ -63,7 +63,8 @@ class ShowcaseApiWrapper {
         if($code == 200 || $code == 204) {
             $result = json_decode($content);
         } else {
-            throw new \Exception('Error while getting data from API on URL ' . $url . ' with return code (' . $code . ') : Request: ' . $body . ' - Response: '. $content);
+            //We don't return an exception to be able to deal with more softly than a 'in your face' exeption, for example a nice flash message
+            $result = null;
         }
 
         curl_close($ch);
